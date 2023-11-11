@@ -1,47 +1,43 @@
 package VendingMachine;
-import java.util.ArrayList;
-import java.util.List;
-
-import VendingMachine.Drinks;
-import VendingMachine.Snacks;
-
 import java.util.List;
 
 public class Machine {
-
-     private List<Snacks> listOfSnacks;
-
-        public List<Snacks> getListOfSnacks(){
-            return this.listOfSnacks;
-        }
-
-        public void setListOfSnacks(List<Snacks> listOfSnacks) {
-            this.listOfSnacks = listOfSnacks;
-        }
-
-        public void addSnacks(Snacks mySnacks) {
-            this.listOfSnacks.add(mySnacks);
-        }
-
-    private List<Drinks> listOfDrinks;
-
-    public List<Drinks> getListOfDrinks(){
-        return this.listOfDrinks;
+    public String getName() {
+        return name;
     }
 
-    public void setListOfDrinks(List<Drinks> listOfDrinks) {
-        this.listOfDrinks = listOfDrinks;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void addSDs(Drinks myDrinks) { this.listOfDrinks.add(myDrinks);
+    public double getMoney() {
+        return money;
     }
 
+    public void setMoney(double money) {
+        this.money = money;
+    }
 
+    public List<Drink> getDrinkList() {
+        return drinkList;
+    }
 
+    public void setDrinkList(List<Drink> drinkList) {
+        this.drinkList = drinkList;
+    }
 
+    public List<Snack> getSnackslist() {
+        return snackslist;
+    }
 
+    public void setSnackslist(List<Snack> snackslist) {
+        this.snackslist = snackslist;
+    }
 
+    private String name;
+    private double money;
 
-
+    private List<Drink> drinkList;
+    private List<Snack> snackslist;
 
     }
