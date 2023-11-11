@@ -48,14 +48,7 @@ Snacks mySnacks = new Snacks();
 
 
 
-            Room myRoom = new Room();
-            myRoom.setName("Magic Room");
-            List<Book> myListOfBook = new ArrayList<>();
-            myListOfBook.add(myBook);
-            myRoom.setBookList(myListOfBook);
-            System.out.println("The new room's name is " + myRoom.getName());
-            System.out.println("This room has " +myRoom.getBooklist().size() + " book(s)!");
-            System.out.println("The only book in this room has a title of " + myRoom.getBooklist().get(0).getTitle());
+            
 
 
     }
