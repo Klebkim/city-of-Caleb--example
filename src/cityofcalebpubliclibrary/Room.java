@@ -22,9 +22,8 @@ public class Room {
     }
     public void addBook(Book myBook) {
         this.booklist.add(myBook);
-    }
+    }}
 
-    public boolean hasBook(String bookName) {
-    }
+
 
 

@@ -1,37 +1,62 @@
-import java.util.List;
 import java.util.ArrayList;
-import cityofcalebpubliclibrary.Book;
-import cityofcalebpubliclibrary.author;
-import cityofcalebpubliclibrary.Room;
+import java.util.List;
+import VendingMachine.Drinks;
+import VendingMachine.Snacks;
+import VendingMachine.Machine;
 public class Main {
     public static void main(String[] args) {
-        Book myBook = new Book();
-        myBook.setTitle("Harry Potter and the Philosopher's Stone");
-        myBook.setPageNumber(309);
-        System.out.println("The book I created is " + myBook.getTitle());
-        System.out.println("The number of pages in this book is " + myBook.getPageNumber());
+Snacks mySnacks = new Snacks();
+        mySnacks.setSnackname("Nerds Gummy");
+        mySnacks.setSnackprice(" $3.00");
+        mySnacks.setSnackquantity("600 grams");
+        System.out.println("The snack I created is " + mySnacks.getSnackname());
+        System.out.println("The snack price is" + mySnacks.getSnackprice());
+        System.out.println("The snack quantity is" + mySnacks.getSnackquantity());
+        mySnacks.setSnackname("Pringles Original");
+        mySnacks.setSnackprice(" $2.00");
+        mySnacks.setSnackquantity("400 grams");
+        System.out.println("The snack I created is " + mySnacks.getSnackname());
+        System.out.println("The snack price is" + mySnacks.getSnackprice());
+        System.out.println("The snack quantity is" + mySnacks.getSnackquantity());
+        mySnacks.setSnackname("Oreo Mini");
+        mySnacks.setSnackprice(" $1.00");
+        mySnacks.setSnackquantity("200 grams");
+        System.out.println("The snack I created is " + mySnacks.getSnackname());
+        System.out.println("The snack price is" + mySnacks.getSnackprice());
+        System.out.println("The snack quantity is" + mySnacks.getSnackquantity());
 
-        author myAuthor = new author();
-        myAuthor.setDob("July 31, 1965");
-        myAuthor.setFirstname("J.K");
-        myAuthor.setLastname("Rowling");
+        Drinks myDrinks = new Drinks();
+        myDrinks.setDrinkname("Prime");
+        myDrinks.setDrinkprice(" $3.00");
+        myDrinks.setDrinkquantity("2 oz");
+        System.out.println("The drink I created is " + myDrinks.getDrinkname());
+        System.out.println("The drink price is" + myDrinks.getDrinkprice());
+        System.out.println("The drink price is" + myDrinks.getDrinkquantity());
 
-        System.out.println("The author's first name is " + myAuthor.getFirstname());
-        System.out.println("The author's last name is " + myAuthor.getLastname());
-        System.out.println("The author's date of birth is " + myAuthor.getDob());
+        myDrinks.setDrinkname("Coke");
+        myDrinks.setDrinkprice(" $2.00");
+        myDrinks.setDrinkquantity("6 oz");
+        System.out.println("The drink I created is " + myDrinks.getDrinkname());
+        System.out.println("The drink price is" + myDrinks.getDrinkprice());
+        System.out.println("The drink price is" + myDrinks.getDrinkquantity());
+        myDrinks.setDrinkname("Gatorade");
+        myDrinks.setDrinkprice(" $1.00");
+        myDrinks.setDrinkquantity(" 4 oz");
+        System.out.println("The drink I created is " + myDrinks.getDrinkname());
+        System.out.println("The drink price is" + myDrinks.getDrinkprice());
+        System.out.println("The drink price is" + myDrinks.getDrinkquantity());
 
-        myBook.setAuthor(myAuthor);
-        System.out.println("The book's author's first name is " + myBook.getAuthor().getFirstname());
-        System.out.println("The book's author's last name is " + myBook.getAuthor().getLastname());
-        System.out.println("The book's author's date of birth is " + myBook.getAuthor().getDob());
 
-        Room myRoom = new Room();
-        myRoom.setName("Magic Room");
-        List<Book> myListOfBook = new ArrayList<>();
-        myListOfBook.add(myBook);
-        myRoom.setBookList(myListOfBook);
-        System.out.println("The new room's name is " + myRoom.getName());
-        System.out.println("This room has " +myRoom.getBooklist().size() + " book(s)!");
-        System.out.println("The only book in this room has a title of " + myRoom.getBooklist().get(0).getTitle());
+
+            Room myRoom = new Room();
+            myRoom.setName("Magic Room");
+            List<Book> myListOfBook = new ArrayList<>();
+            myListOfBook.add(myBook);
+            myRoom.setBookList(myListOfBook);
+            System.out.println("The new room's name is " + myRoom.getName());
+            System.out.println("This room has " +myRoom.getBooklist().size() + " book(s)!");
+            System.out.println("The only book in this room has a title of " + myRoom.getBooklist().get(0).getTitle());
+
+
     }
 }
