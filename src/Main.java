@@ -57,59 +57,77 @@ public class Main {
                      int quantity = oreo.getSnackquantity();
                      if (quantity < 1) {
                          System.out.println("Sorry! We are out of oreos.");
-                     } else if (quantity > 1){
-                         oreo.setSnackquantity(quantity - 1);
+                     } else if (quantity > 1) {
                          machine.setMoney(machine.getMoney() + oreo.getSnackprice());
                      }
+                     else{
 
+                         oreo.setSnackquantity(quantity - 1);
                      System.out.println("The number of oreo left is " + oreo.getSnackquantity());
-                 } if (choice == 2) {
+                 }
+                 if (choice == 2) {
                      System.out.println("You chose Fanta. Fantastic!");
                      machine.setMoney(machine.getMoney() + fanta.getPrice());
-                     if (quantity < 1) {
+                     int quantitY = fanta.getQuantity();
+                     if (quantitY < 1) {
                          System.out.println("Sorry! We are out of fanta.");
-                     } else if (quantity > 1){
-                         fanta.setQuantity(quantity - 1);
+                     } else if (quantitY > 1) {
+                         fanta.setQuantity(quantitY - 1);
                          machine.setMoney(machine.getMoney() + fanta.getPrice());
-                     }
-                     else{
-                     fanta.setQuantity(fanta.getQuantity() - 1);
-                     int Quantity = fanta.getQuantity();
-                     System.out.println("The number of fanta left is " + fanta.getQuantity());
+                     } else {
+                         fanta.setQuantity(fanta.getQuantity() - 1);
+
+                         System.out.println("The number of fanta left is " + fanta.getQuantity());
 
 
                      }
                  } else if (choice == 3) {
                      System.out.println("You chose Nerds. Noice!");
                      machine.setMoney(machine.getMoney() + nerds.getSnackprice());
-                     nerds.setSnackquantity(nerds.getSnackquantity() - 1);
                      int snackquantity = nerds.getSnackquantity();
                      if (snackquantity < 1) {
                          System.out.println("Sorry! We are out of nerds.");
+                     } else if (snackquantity > 1) {
+                         machine.setMoney(machine.getMoney() + nerds.getSnackprice());
+                     }
+                     else {
+
+                         nerds.setSnackquantity(snackquantity - 1);
+                         System.out.println("The number of nerds left is " + nerds.getSnackquantity());
                      }
                  } else if (choice == 4) {
                      System.out.println("You chose Sprite. Splendid!");
                      machine.setMoney(machine.getMoney() + sprite.getQuantity());
-                     sprite.setQuantity(sprite.getQuantity() - 1);
                      int Quantity = sprite.getQuantity();
                      if (Quantity < 1) {
-                         System.out.println("Sorry! We are out of Sprite.");
+                         System.out.println("Sorry! We are out of sprite.");
+                     } else if (Quantity > 1) {
+                         machine.setMoney(machine.getMoney() + sprite.getPrice());
+                     }
+                     else{
+                         sprite.setQuantity(Quantity - 1);
+                         System.out.println("The number of sprite left is " + sprite.getQuantity());
                      }
                  } else if (choice == 5) {
                      System.out.println("You chose Coke. Good Choice!");
-                     machine.setMoney(machine.getMoney() + fanta.getPrice());
-                     fanta.setQuantity(fanta.getQuantity() - 1);
-                     int Quantity1 = fanta.getQuantity();
-                     if (Quantity1 < 1) {
+                     machine.setMoney(machine.getMoney() + coke.getPrice());
+                     int quantity1 = coke.getQuantity();
+                     if (quantity1 < 1) {
                          System.out.println("Sorry! We are out of coke.");
+                     } else if (quantity1 > 1) {
+                         machine.setMoney(machine.getMoney() + coke.getPrice());
+                     }
+                     else{
+                         coke.setQuantity(quantity1 - 1);
+                         System.out.println("The number of sprite left is " + sprite.getQuantity());
                      }
 
-             } else {
+                 } else {
 
-                System.out.println("The amount of money in the machine is " + machine.getMoney());
-            }
-
+                     System.out.println("The amount of money in the machine is " + machine.getMoney());
                  }
+
+             }
              }
 //            System.out.println("The amount of money left in the machine is " +machine.getMoney());
 //            System.out.println("The number of oreo left in the machine is " + oreo.getSnackquantity());
@@ -130,4 +148,4 @@ public class Main {
 //            System.out.println("The amount of money left in the machine is " +machine.getMoney());
 //            System.out.println("The number of oreo left in the machine is " + oreo.getSnackquantity());
 //        }
-}
+}}
