@@ -66,11 +66,18 @@ public class Main {
                  } if (choice == 2) {
                      System.out.println("You chose Fanta. Fantastic!");
                      machine.setMoney(machine.getMoney() + fanta.getPrice());
-                     fanta.setQuantity(fanta.getQuantity() - 1);
-                     int quantitY = fanta.getQuantity();
-                     System.out.println("The number of fanta left is " + fanta.getQuantity());
-                     if (quantitY < 1) {
+                     if (quantity < 1) {
                          System.out.println("Sorry! We are out of fanta.");
+                     } else if (quantity > 1){
+                         fanta.setQuantity(quantity - 1);
+                         machine.setMoney(machine.getMoney() + fanta.getPrice());
+                     }
+                     else{
+                     fanta.setQuantity(fanta.getQuantity() - 1);
+                     int Quantity = fanta.getQuantity();
+                     System.out.println("The number of fanta left is " + fanta.getQuantity());
+
+
                      }
                  } else if (choice == 3) {
                      System.out.println("You chose Nerds. Noice!");
