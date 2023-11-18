@@ -48,7 +48,7 @@ public class Main {
                  System.out.println("3. Nerds");
                  System.out.println("4. Sprite");
                  System.out.println("5. Coke");
-                 System.out.println("6. Nothing");
+                 int managerPin = 471016;
                  int choice = machineScanner.nextInt();
                  if (choice == 1) {
                      System.out.println("You chose oreo! OK!");
@@ -117,30 +117,24 @@ public class Main {
                          System.out.println("The number of sprite left is " + sprite.getQuantity());
                      }
 
-                  else {
+                  else if (choice == managerPin){
+                      String password = "Soccer";
+                     System.out.println("Manager mode: On");
+                     System.out.println("Please enter the password: ");
+
+                     String checkPw = machineScanner.nextLine();
+                     if(checkPw.equals(password)){
+                         System.out.println("Manager authenticated successfully");
+                     } else {
+                         System.out.println("Incorrect password. Are you sure you are the manager");
+                     }
+
+                 }
+
+                      else {
 
                      System.out.println("The amount of money in the machine is " + machine.getMoney());
                  }
 
              }
-             }
-//            System.out.println("The amount of money left in the machine is " +machine.getMoney());
-//            System.out.println("The number of oreo left in the machine is " + oreo.getSnackquantity());
-//               System.out.println("Do you want an Oreo?(Yes / No)");
-//               Scanner machineScanner = new Scanner(System.in);
-//               String answer = machineScanner.nextLine();
-//               if (answer.equalsIgnoreCase("Yes")) {
-//                   int oreoQuantity = oreo.getSnackquantity();
-//                   oreoQuantity --;
-//                   oreo.setSnackquantity(oreoQuantity);
-//
-//                   double myMoney = machine.getMoney();
-//                   myMoney = myMoney + oreo.getSnackprice();
-//                   //machine.setMoney(myMoney);
-//
-//                   machine.setMoney(machine.getMoney() + oreo.getSnackprice());
-//               }
-//            System.out.println("The amount of money left in the machine is " +machine.getMoney());
-//            System.out.println("The number of oreo left in the machine is " + oreo.getSnackquantity());
-//        }
-}
+             }}
